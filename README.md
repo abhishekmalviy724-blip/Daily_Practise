@@ -42,3 +42,74 @@ for i in a:
 print(new)
 ____________________________________________________________________________________________________________________________________________________________________________
 
+# Day 3.
+# a = "abhishek malviy"
+# b=[f"{i[0].upper()}{i[1:]}" for i in a.split()]
+# print(" ".join(b))
+
+# s = [1, 2, 2, 3, 3, 3, 4]
+# print({i:s.count(i) for i in s})
+# fre1={}
+# for i in s:
+#     fre1[i]=fre1.get(i,0)+1
+# print(fre1)
+
+# students = [("Amit", 85), ("Priya", 92), ("Raj", 78)]
+# new=sorted(students, key=lambda x:x[1],reverse=True)
+# print(new)
+
+# s = [10, 15, 22, 33, 40, 55, 68]
+# print([i for i in s if i%2==0 and i>20])
+
+
+# def a(*arg):
+#     sum=0
+#     for i in arg:
+#         sum+=i
+#         avg = sum/len(arg)
+#     return avg
+# print(a(2, 4, 6, 8))
+        
+a = "mada," 
+rev = ""
+for i in a:
+    rev = i + rev
+if rev == a:
+    print("P")
+else:
+    print("No")
+
+employees = [
+    {"name": "Amit", "dept": "IT", "salary": 50000},
+    {"name": "Priya", "dept": "HR", "salary": 40000},
+    {"name": "Raj", "dept": "IT", "salary": 60000},
+    {"name": "Neha", "dept": "HR", "salary": 45000},
+]
+new={i["dept"]: i["salary"]/len(employees) for i in employees}
+print(new)
+
+nums = [4, 2, 5, 2, 4, 7, 5, 9]
+new = []
+for i in nums:
+    if i not in new:
+        new.append(i)
+print(new)
+
+try:
+    a=int(input("Enter"))
+    b=int(input("Enter"))
+    print(a/b)
+except ZeroDivisionError:
+    print("Error: Division by zero")
+    
+except ValueError:
+    print("Error: Invalid input")
+    
+
+s = "programming"
+new =[]
+for i in s:
+    if s.count(i)>1 and i not in new:
+        print(i)
+        new.append(i)
+____________________________________________________________________________________________________________________________________________________________________________

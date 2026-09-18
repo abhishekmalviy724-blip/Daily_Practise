@@ -137,3 +137,42 @@ for i in data:
     except ValueError:
         pass
 ____________________________________________________________________________________________________________________________________________________________________________
+
+# Day 5.
+students = [
+    ("Amit", 78),
+    ("Ravi", 92),
+    ("Amit", 85),
+    ("Meena", 88),
+    ("Ravi", 76),
+    ("Meena", 95)
+]
+new={}
+for name,marks in students:
+    if name not in new:
+        new[name]=[]
+    new[name].append(marks)
+print(new)
+
+words = ["python", "java", "python", "sql", "java", "python", "ml"]
+print({i: words.count(i) for i in words if words.count(i)>=2})
+
+nums = [10, 20, 10, 30, 20, 40, 50, 30]
+print(list(dict.fromkeys(nums)))
+
+text = "python is easy and python is powerful and python is popular"
+print({i: text.count(i) for i in text.split() if text.count(i)>=2})
+
+students = {
+    "Amit": 78,
+    "Ravi": 92,
+    "Meena": 65,
+    "Rahul": 88,
+    "Priya": 55
+}
+print({name: marks+5 for name,marks in students.items() if marks>=70})
+
+from functools import reduce
+nums = [10, 15, 20, 25, 30, 35, 40]
+print(reduce(lambda x,y:x*y, filter(lambda x:x%2==0,nums)))
+____________________________________________________________________________________________________________________________________________________________________________

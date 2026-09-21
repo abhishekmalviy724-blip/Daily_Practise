@@ -219,3 +219,55 @@ for num in range(2, n + 1):
 print("Prime numbers:", primes)
 print("Count:", len(primes))
 print("Sum:", sum(primes))
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# Day 8.
+employees = [
+    {"name": "Amit", "salary": 25000, "department": "IT"},
+    {"name": "Rahul", "salary": 35000, "department": "HR"},
+    {"name": "Priya", "salary": 45000, "department": "IT"},
+    {"name": "Neha", "salary": 30000, "department": "Sales"},
+    {"name": "Ravi", "salary": 50000, "department": "IT"}
+]
+for i in employees:
+    if i["salary"]>30000 and i["department"]=="IT":
+     print(i["name"],i["salary"])
+___________________________________________________________
+products = [
+    {"name": "Laptop", "price": 55000, "stock": 3},
+    {"name": "Mouse", "price": 800, "stock": 15},
+    {"name": "Keyboard", "price": 1500, "stock": 0},
+    {"name": "Monitor", "price": 12000, "stock": 5},
+    {"name": "Webcam", "price": 3000, "stock": 0}
+]
+for i in products:
+    if i["stock"]>0 and i["price"]>10000:
+        print(i["name"],i["price"])
+____________________________________________________________
+sales = [
+    {"product": "Laptop", "quantity": 2, "price": 50000},
+    {"product": "Mouse", "quantity": 5, "price": 800},
+    {"product": "Keyboard", "quantity": 3, "price": 1500},
+    {"product": "Monitor", "quantity": 2, "price": 12000},
+    {"product": "Webcam", "quantity": 4, "price": 3000}
+]
+for i in sales:
+    total = i["quantity"] * i["price"]
+    if total > 70000:
+        print(i["product"], total)
+_______________________________________________________________
+students = [
+    {"name": "Amit", "marks": [78, 85, 90]},
+    {"name": "Rahul", "marks": [65, 72, 68]},
+    {"name": "Priya", "marks": [90, 92, 88]},
+    {"name": "Neha", "marks": [82, 79, 85]},
+    {"name": "Ravi", "marks": [70, 75, 80]}
+]
+high_marks = 0
+for i in students:
+    avg = sum(i["marks"])/len(i["marks"])
+    if avg>high_marks:
+        high_marks=avg
+        name = i["name"]
+print(name,high_marks)
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________

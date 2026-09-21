@@ -270,4 +270,26 @@ for i in students:
         high_marks=avg
         name = i["name"]
 print(name,high_marks)
+_______________________________________________________________
+employees = {
+    "Amit": {"age": 22, "salary": 30000},
+    "Rahul": {"age": 25, "salary": 45000},
+    "Priya": {"age": 23, "salary": 38000},
+    "Neha": {"age": 27, "salary": 52000}
+}
+for name,info in employees.items():
+    if info["salary"]>40000:
+        print(name,info["salary"])
+_______________________________________________________
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+new=[]
+for i in nums:
+    if i%2==0:
+        even = i**2
+        new.append(even)
+    else:
+        if i!=3:
+            odd=i**3
+            new.append(odd)
+print(new)
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________

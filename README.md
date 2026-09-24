@@ -312,3 +312,91 @@ keys = ["a", "b", "c"]
 values = [1, 2, 3]
 print({k: f"{k}:{v}" for k,v in zip(keys,values)})
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+# Day 10.
+class Employee:
+    def __init__(self,name,salary,department):
+        self.name=name
+        self.salary=salary
+        self.department=department
+    def display(self):
+        print(self.name,self.salary,self.department)
+onj1=(Employee("Abhishek",1500000,"MLE"))
+onj2=(Employee("Ankit",1500000,"B.Pharma"))
+onj3=(Employee("Ayush",1500000,"B.Com"))
+onj1.display()
+onj2.display()
+onj3.display()
+_____________________________________________________
+class BankAccount:
+    def __init__(self,account_holder,balance):
+        self.account_holder=account_holder
+        self.balance=balance
+    def deposit(self, amount):
+        self.balance +=amount
+    def withdraw(self, amount):
+        self.balance -=amount
+    def show_balance(self):
+        print(self.balance)
+obj = BankAccount("Abhishek",500000)
+obj.withdraw(70)
+obj.show_balance()
+____________________________________________________
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def average(self):
+        total = 0
+
+        for i in self.marks:
+            total += i
+
+        return total / len(self.marks)
+
+    def result(self):
+        avg = self.average()
+
+        if avg >= 60:
+            return "Pass"
+        else:
+            return "Fail"
+
+    def display(self):
+        print(self.name)
+        print(self.average())
+        print(self.result())
+
+obj = Student("Abhishek", [78, 89, 65])
+
+obj.display()
+________________________________________________________________
+class Person:
+    def __init__(self, name,age):
+        self.name=name
+        self.age=age
+    def display_person(self):
+        print(self.name,self.age)
+class student(Person):
+    def __init__(self, name, age, course, marks):
+        super().__init__(name, age)
+        self.course=course
+        self.marks=marks
+    def display_student(self):
+        print(self.name,self.age, self.course, self.marks)
+obj = student("Abhishek",20,"B.E",80)
+obj.display_person()
+______________________________________________________________-
+class Animal:
+    def __init__(self,name):
+        self.name=name
+    def sound(self):
+        print("Aminal makes a sound!")
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+    def sound(self):
+        print(self.name)
+obj = Dog("Bark")
+obj.sound()
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________

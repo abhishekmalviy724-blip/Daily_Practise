@@ -450,3 +450,109 @@ for i in students:
     else:
         print("Fail")
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+employees = [
+    {"name": "Aman", "dept": "IT", "salary": 55000, "ratings": [8, 7, 9]},
+    {"name": "Riya", "dept": "HR", "salary": 48000, "ratings": [9, 8, 8]},
+    {"name": "Karan", "dept": "IT", "salary": 62000, "ratings": [6, 7, 6]},
+    {"name": "Neha", "dept": "Sales", "salary": 51000, "ratings": [9, 9, 10]},
+    {"name": "Rahul", "dept": "Sales", "salary": 45000, "ratings": [5, 6, 7]},
+    {"name": "Priya", "dept": "HR", "salary": 58000, "ratings": [8, 9, 9]}
+]
+
+
+def analyze_employees(employees):
+
+    departments = {}
+    excellent = []
+
+    for employee in employees:
+
+        average = sum(employee["ratings"]) / len(employee["ratings"])
+
+        if average >= 8.5:
+            performance = "Excellent"
+            increment = 0.15
+            excellent.append(employee["name"])
+
+        elif average >= 7:
+            performance = "Good"
+            increment = 0.10
+
+        elif average >= 5:
+            performance = "Average"
+            increment = 0.05
+
+        else:
+            performance = "Poor"
+            increment = 0
+
+        new_salary = employee["salary"] + employee["salary"] * increment
+
+        employee["average_rating"] = round(average, 2)
+        employee["performance"] = performance
+        employee["updated_salary"] = round(new_salary, 2)
+
+        dept = employee["dept"]
+
+        if dept not in departments:
+            departments[dept] = []
+
+        departments[dept].append(employee)
+
+    department_salary = {}
+
+    for dept, data in departments.items():
+
+        total_salary = sum(employee["salary"] for employee in data)
+
+        department_salary[dept] = round(
+            total_salary / len(data), 2
+        )
+
+    department_top = {}
+
+    for dept, data in departments.items():
+
+        top_employee = max(
+            data,
+            key=lambda employee: employee["average_rating"]
+        )
+
+        department_top[dept] = top_employee["name"]
+
+    overall_top = max(
+        employees,
+        key=lambda employee: employee["average_rating"]
+    )
+
+    print("EMPLOYEE PERFORMANCE")
+
+    for employee in employees:
+        print(
+            employee["name"],
+            employee["average_rating"],
+            employee["performance"],
+            employee["updated_salary"]
+        )
+
+    print("\nDEPARTMENT AVERAGE SALARY")
+
+    for dept, salary in department_salary.items():
+        print(dept, salary)
+
+    print("\nDEPARTMENT TOP EMPLOYEE")
+
+    for dept, name in department_top.items():
+        print(dept, name)
+
+    print("\nEXCELLENT EMPLOYEES")
+    print(excellent)
+
+    print("\nOVERALL TOP EMPLOYEE")
+    print(overall_top["name"])
+    print(overall_top["average_rating"])
+
+
+analyze_employees(employees)
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________

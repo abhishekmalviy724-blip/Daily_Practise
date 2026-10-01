@@ -581,3 +581,98 @@ for i in new:
         new1.append(i)
 print(new1)
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+L = [1,2,3,4,5]
+largest = L[0]
+smallest = L[0]
+for i in L:
+    if i>largest:
+        largest=i
+    elif i<smallest:
+        smallest=i
+print(largest)
+print(smallest)
+___________________________________________________
+L1 = [1,2,3,4,5]
+L2 = [5,6,7,8,9]
+for i in L1:
+    if i in L2:
+        print(i)
+_______________________________________________________
+nums = [10, 20, 10, 30, 20, 40, 10, 30, 50, 20]
+new = {i: nums.count(i) for i in nums}
+list = []
+for i in new:
+    if new[i]==3:
+        list.append(i)
+print(list)
+______________________________________________________
+nums = [2, 5, 2, 8, 5, 2, 9, 8, 5, 8, 8]
+new = {i: nums.count(i) for i in nums}
+max_frq = 0
+max_num = 0
+for key,value in new.items():
+    if value>max_frq:
+        max_frq=value
+        max_num=key
+print(max_num)
+__________________________________________________
+nums = [4, 2, 7, 4, 9, 2, 4, 7, 9, 9, 9]
+new = {}
+for i in nums:
+    if i in new:
+        new[i]+=1
+    else:
+        new[i]=1
+print(new)
+__________________________________________________________
+nums = [10, 15, 20, 10, 25, 15, 30, 20, 10, 35, 15]
+dic = {}
+for i in nums:
+    if i in dic:
+        dic[i]+=1
+    else:
+        dic[i]=1
+for j in dic:
+    if dic[j]==2:
+        print(i)
+_____________________________________________________________
+nums = [5, 2, 8, 5, 2, 9, 8, 5, 2, 2, 7]
+frq = {}
+for i in nums:
+    if i in frq:
+        frq[i]+=1
+    else:
+        frq[i]=1
+max_frq=0
+max_num=0
+for key,value in frq.items():
+    if value>max_frq:
+        max_frq=value
+        max_num=key
+max_frq,max_frq
+___________________________________________________
+nums = [10, 20, 30, 20, 40, 10, 50, 30, 60]
+dic = {}
+new=[]
+for i in nums:
+    if i in dic:
+        if dic[i]==1:
+            new.append(i)
+        dic[i]+=1
+    else:
+        dic[i]=1
+new
+__________________________________________________-
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even = []
+for i in nums:
+    if i%2==0:
+        even.append(i**2)
+    else:
+        even.append(i**3)
+print(even)
+____________________________________________________
+nums = [12, 5, 8, 21, 10, 7, 16, 3, 14, 9]
+{"Even":[i for i in nums if i%2==0],
+ "Odd":[i for i in nums if i%2!=0]}
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________

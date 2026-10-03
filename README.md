@@ -676,3 +676,130 @@ nums = [12, 5, 8, 21, 10, 7, 16, 3, 14, 9]
 {"Even":[i for i in nums if i%2==0],
  "Odd":[i for i in nums if i%2!=0]}
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+a = [12, 5, 8, 21, 10, 7,0,-1]
+[i for i in a if i%2==0]
+
+sum=0
+for i in a:
+    sum+=1
+sum
+___________________________
+max_num = a[0]
+min_num = a[0]
+for i in a:
+    if i>max_num:
+        max_num=i
+    elif i<min_num:
+        min_num=i
+print(min_num)
+print(max_num)
+______________________________________________
+p = 0
+n = 0
+zero = 0
+for i in a:
+    if i == 0:
+        zero+=1
+    elif i<0:
+        n+=1
+    else:
+        p+=1
+print(p)
+print(n)
+print(zero)
+________________________________________
+a="PythonProgramming"
+v=0
+c=0
+for i in a:
+    if i in "AIOUEaioue":
+        v+=1
+    else:
+        c+=1
+print(v)
+print(c)
+_______________________
+rev = ""
+for i in a:
+    rev = i + rev
+print(rev)
+________________________-
+rev = ""
+for i in a:
+    rev = i + rev
+if rev == a:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+__________________________________
+a=[1,2,3,4,5,5]
+new = []
+for i in a:
+    if i in new:
+        pass
+    else:
+        new.append(i)
+new
+_____________________________________
+a=[1,2,3,4,3,2,3,4]
+{i: a.count(i) for i in a}
+____________________________
+a=[1,1,2,3,4,5,5,6]
+new={i: a.count(i) for i in a}
+for key,values in new.items():
+    if values==2:
+        print(key)
+_____________________________________
+a=[1,2,3,4]
+b=[4,5,6,7]
+for i in a:
+    if i in b:
+        print(i)
+______________________________
+c=a+b
+new = []
+for i in c:
+    if i in new:
+        pass
+    else:
+        new.append(i)
+print(new)
+________________________________
+a=[1,2,3,4,5,6]
+max_1 = a[0]
+max_2 = a[0]
+for i in a:
+    if i>max_2:
+        max_2=max_1
+        max_1=i
+print(max_2)
+_________________________________________
+a = [3, 1, 4, 2, 5, 6]
+min_1 = float('inf')
+min_2 = float('inf')
+
+for i in a:
+    if i < min_1:
+        min_2 = min_1
+        min_1 = i
+
+    if i < min_2:
+        if i != min_1:
+            min_2 = i
+
+print("Smallest:", min_1)
+print("Second smallest:", min_2)
+____________________________________
+a=12345
+sum=0
+for i in str(a):
+    sum+=int(i)
+print(sum)
+________________________________
+a=12345
+rev=""
+for i in str(a):
+    rev = i + rev
+rev
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________

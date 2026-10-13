@@ -921,4 +921,95 @@ num1 , num2 = a,b
 while b != 0 :
     a,b = b, a % b
 print(a)
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+s = "aabbcdeff"
+new={i: s.count(i) for i in s}
+for key,value in new.items():
+    if value==1:
+        print(key)
+        break
+else:
+    print(None)
+__________________________________________________
+s = "python is easy and python is powerful"
+new={i: s.count(i)  for i in s.split()}
+for j,k in new.items():
+    print(j,":",k)
+_____________________________________________
+a = [0, 5, 0, 3, 8, 0, 2, 1]
+new = []
+new1 = []
+for i in a:
+    if i>0:
+        new.append(i)
+    else:
+       i==0
+       new1.append(i)
+print(new+new1)
+_________________________________
+a = [1, 2, 3, 5, 6, 7]
+for i in range(1,8):
+    if i not in a:
+        print(i)
+_____________________________________
+a = [2, 4, 3, 2, 5, 4, 6, 3, 7]
+new=[]
+new1=[]
+for i in a:
+    if i not in new:
+        new.append(i)
+    else:
+        i>1
+        new1.append(i)
+print(new1)
+________________________________________
+a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5]
+new={}
+for i in a:
+    if i in new:
+        new[i]+=1
+    else:
+        new[i]=1 
+max2=a[0]
+max1=a[0]
+for key,value in new.items():
+    if value>max1:
+        max1=max2
+        max2=value
+print(max1)
+___________________________________
+d1 = {"a": 10, "b": 20, "c": 30}
+d2 = {"b": 5, "c": 15, "d": 40}
+for key,value in d1.items():
+    if key in d2:
+        d2[key]+=1
+    else:
+        d1[key]=1
+print(d1)
+_______________________________________
+s = "python programming is easy"
+count={}
+for i in s.split():
+    total=0
+    for  j in i:
+        if j in "AIOUEaioue":
+            total+=1
+        count[i]=total
+print(count)
+________________________________________
+a = [4, 2, 7, 2, 8, 4, 9, 10]
+new={i: a.count(i) for i in  a}
+new
+for key,value in new.items():
+    if value==1:
+        print(key)
+___________________________________
+a = [1, 2, 3, 4, 2, 5, 6]
+b = [2, 4, 6, 8, 2, 10]
+new=[]
+for i in a:
+    if i in b and i not in new:
+        new.append(i)
+for i in new:
+    print(i)
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

@@ -1013,3 +1013,47 @@ for i in a:
 for i in new:
     print(i)
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+s = "python is powerful and programming is interesting"
+max1=0
+for i in s.split():
+    if len(i)>max1:
+        max1=len(i)
+print(i)
+___________________________________________________________
+s = "python programming"
+frq = {}
+for i in s:
+    if i in frq:
+        frq[i]+=1
+    else:
+        frq[i]=1
+max_count=0
+max_chr=0
+for key,value in frq.items():
+    if value > max_count:
+        max_count=max_chr
+print(max_chr)
+_____________________________________
+a = [1, 2, 3, 4, 5, 6]
+k = 2
+new = []
+new1 = []
+for i in a:
+    new.append(i)
+    new1.append(i)
+print(new[-1:-3:-1])
+print(new1[0:4])
+print(new+new1)
+______________________________
+n = 12321
+temp = n
+rev =0
+while temp>0:
+    tem = temp % 10
+    rev = rev * 10 + tem
+    temp //= 10
+if rev == n:
+    print("P")
+else:
+    print("N")
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

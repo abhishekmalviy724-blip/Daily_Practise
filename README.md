@@ -1072,3 +1072,45 @@ class BankAccount:
             
 obj= BankAccount(balance=100)
 obj.deposit_amount(20)
+___________________________________________
+nums = [4, 7, 2, 9, 6, 3]
+even = []
+for i in nums:
+    if i%2==0:
+        even.append(i)
+even
+__________________________________________
+nums = [2, 4, 2, 7, 4, 9, 7, 5]
+new= []
+for i in nums:
+    if i in new:
+        pass
+    else:
+        new.append(i)
+new
+____________________________________
+nums = [1, 2, 3, 4, 5, 6, 7]
+new = []
+new1 = []
+k = 3
+rev = 0
+for i in nums:
+    if i >4:
+        new.append(i)
+    else:
+        new1.append(i)
+new+new1
+_________________________________________
+nums = [1, 2, 3, 2, 4, 3, 1, 5]
+new=[]
+fiq = {}
+for i in nums:
+    if i in fiq:
+        fiq[i]+=1
+    else:
+        fiq[i]=1
+for key,value in fiq.items():
+    if value==1:
+        new.append(key)
+new
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

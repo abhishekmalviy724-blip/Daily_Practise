@@ -1057,3 +1057,18 @@ if rev == n:
 else:
     print("N")
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+class BankAccount:
+    def __init__(self,balance=100):
+        self.balance=balance
+    def deposit_amount(self,amount):
+        self.balance +=amount
+        print(self.balance)
+    def withraw_amount(self,amount):
+        if amount>self.balance:
+            print("Insufficient Balance")
+        else:
+            self.balance -=amount
+            print(self.balance)
+            
+obj= BankAccount(balance=100)
+obj.deposit_amount(20)

@@ -1114,3 +1114,20 @@ for key,value in fiq.items():
         new.append(key)
 new
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+nums = [10, 20, 10, 30, 40, 20, 50, 30, 60]
+
+# 1 & 2. Frequency count
+freq = {}
+for n in nums:
+    freq[n] = freq.get(n, 0) + 1
+
+# Duplicate values
+duplicates = [n for n, count in freq.items() if count > 1]
+
+# Sirf frequency 1 wale numbers
+unique_once = [n for n in nums if freq[n] == 1]
+
+print("Frequency:", freq)
+print("Duplicates:", duplicates)
+print("Frequency 1 List:", unique_once)
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

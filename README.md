@@ -1135,3 +1135,33 @@ a=[1, 2, 3, 5, 6]
 for i in range(1,7):
     if i not in a:
         print(i)
+__________________________________________________________
+patient_ids = [101, 205, 101, 310, 205, 422, 310, 101]
+new = []
+for i in patient_ids:
+    if i in new:
+        pass
+    else:
+        new.append(i)
+new
+____________________________________________________________________________________________
+diagnoses = ["Diabetes", "Hypertension", "Diabetes", "Asthma", "Hypertension", "Diabetes"]
+print({i: diagnoses.count(i) for i in diagnoses})
+_______________________________________________________________________________________________
+patients = [("Ravi", 25), ("Sita", 67), ("Amit", 45), ("Neha", 70), ("Karan", 30)]
+new = {"adult":[], "senior":[]}
+for name,age in patients:
+    if age>=60:
+        new["senior"].append(name)
+    else:
+        new["adult"].append(name)
+new
+_________________________________________________________________________________________________
+lab_results = [("Hemoglobin", 9.5), ("Glucose", 110), ("Cholesterol", 240), ("Creatinine", 0.9)]
+normal_range = {"Hemoglobin": (12, 17), "Glucose": (70, 140), "Cholesterol": (0, 200), "Creatinine": (0.6, 1.3)}
+new = []
+for i,j in lab_results: 
+        low,high=normal_range[i]
+        if j<low or j>high:
+            new.append(i)
+new

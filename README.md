@@ -1165,3 +1165,9 @@ for i,j in lab_results:
         if j<low or j>high:
             new.append(i)
 new
+_______________________________
+# Marks ka average nikalna
+marks = [78, 85, 92, 67, 88]
+
+average = sum(marks) / len(marks)
+print(f"Average marks: {average:.2f}")

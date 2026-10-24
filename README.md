@@ -1171,3 +1171,35 @@ marks = [78, 85, 92, 67, 88]
 
 average = sum(marks) / len(marks)
 print(f"Average marks: {average:.2f}")
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+lab_results = [("Hemoglobin", 9.5), ("Glucose", 110), ("Cholesterol", 240), ("Creatinine", 0.9)]
+normal_range = {"Hemoglobin": (12, 17), "Glucose": (70, 140), "Cholesterol": (0, 200), "Creatinine": (0.6, 1.3)}
+for key,value in lab_results:
+    for key2,value2 in normal_range.items():
+        if key == key2:
+            low,high = value2
+            if low <=value <=high:
+                print(key,"Normal")
+            else:
+                print(key,"Abnormal")
+_________________________________________________________________________________________________________________________
+
+patients = [
+    {"name": "Aman", "age": 65, "bp": 150},
+    {"name": "Riya", "age": 22, "bp": 110},
+    {"name": "Rohit", "age": 72, "bp": 170},
+    {"name": "Neha", "age": 45, "bp": 125},
+    {"name": "Karan", "age": 60, "bp": 145}
+]
+High_risk=0
+Normal_risk=0
+for i in patients:
+    if i["age"]>=60 and i["bp"]>140:
+        High_risk+=1
+    else:
+        Normal_risk+=1
+print(High_risk)
+print(Normal_risk)
+print(i["name"],":High Risk")
+print(i["name"],":Normal Risk")
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

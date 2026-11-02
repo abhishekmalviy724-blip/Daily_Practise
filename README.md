@@ -1218,3 +1218,75 @@ for user, amounts in transactions.items():
 
 print("Suspicious Users:", suspicious_users)
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+import datetime
+
+balance = 5000
+pin = "1234"
+history = []
+
+print("===== WELCOME TO PYTHON BANK =====")
+
+user_pin = input("Enter your 4-digit PIN: ")
+
+if user_pin == pin:
+
+    while True:
+        print("\n===== MAIN MENU =====")
+        print("1. Check Balance")
+        print("2. Deposit Money")
+        print("3. Withdraw Money")
+        print("4. Transaction History")
+        print("5. Exit")
+
+        choice = input("\nEnter your choice: ")
+
+        if choice == "1":
+            print("Your Balance: ₹", balance)
+
+        elif choice == "2":
+            amount = float(input("Enter deposit amount: ₹"))
+
+            if amount > 0:
+                balance += amount
+                history.append(
+                    f"Deposited ₹{amount} - {datetime.datetime.now()}"
+                )
+                print("Money Deposited Successfully!")
+
+            else:
+                print("Invalid Amount!")
+
+        elif choice == "3":
+            amount = float(input("Enter withdrawal amount: ₹"))
+
+            if amount <= 0:
+                print("Invalid Amount!")
+
+            elif amount <= balance:
+                balance -= amount
+                history.append(
+                    f"Withdrawn ₹{amount} - {datetime.datetime.now()}"
+                )
+                print("Withdrawal Successful!")
+
+            else:
+                print("Insufficient Balance!")
+
+        elif choice == "4":
+            print("\n===== TRANSACTION HISTORY =====")
+
+            if history:
+                for transaction in history:
+                    print(transaction)
+            else:
+                print("No Transactions Yet!")
+
+        elif choice == "5":
+            print("Thank You For Using Our Bank!")
+            break
+
+        else:
+            print("Invalid Choice! Try Again.")
+
+else:
+    print("Incorrect PIN! Access Denied.")

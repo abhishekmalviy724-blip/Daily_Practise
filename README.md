@@ -1310,3 +1310,32 @@ while True:
     else:
         print(f" Correct! You won in {attempts} attempts.")
         break
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+a=int(input("NUM"))
+b=len(str(a))
+sum=0
+for i in str(a):
+    sum+=int(i)**b
+print("ArmStrong" if sum==a else "not ArmStrong")
+____________________________________________________
+
+b = int(input("num...!"))
+sum=0
+for i in range(1,b):
+    if b % i == 0:
+        sum+=i
+print("Perfact No." if sum==b else "not Perfact No.")
+_________________________________________________________
+
+b = int(input("Enter...!"))
+temp = b
+sum = 0
+for i in str(b):
+    sum+=int(i)
+print("Harshad Num." if b % sum==0 else "Not")
+__________________________________________________________
+
+d = 6
+c = d**2
+print("Automorphic number" if str(c).endswith(str(d)) else "Not Automorphic number")
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________

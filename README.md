@@ -1361,3 +1361,22 @@ for i in range(1,11):
     if i not in numbers:
         print("Missing number:",i)
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+import random
+
+number = random.randint(1, 100)
+
+print("Welcome to Number Guessing Game!")
+print("Guess a number between 1 and 100")
+
+while True:
+    guess = int(input("Enter your guess: "))
+
+    if guess < number:
+        print("Too Low! Try Again.")
+    elif guess > number:
+        print("Too High! Try Again.")
+    else:
+        print(" Congratulations! You guessed the correct number!")
+        break
+        

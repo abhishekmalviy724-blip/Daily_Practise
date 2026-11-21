@@ -1380,3 +1380,48 @@ while True:
         print(" Congratulations! You guessed the correct number!")
         break
         
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+students = {
+    "Abhishek": 85,
+    "Rahul": 72,
+    "Aman": 90,
+    "Rohit": 65,
+    "Priya": 95
+}
+
+# Add student
+students["Neha"] = 88
+
+# Update marks
+students["Rahul"] = 80
+
+# Delete student
+del students["Rohit"]
+
+# Search student
+name = "Abhishek"
+
+if name in students:
+    print("Marks:", students[name])
+else:
+    print("Student Not Found")
+
+# Sort by marks
+sorted_students = sorted(
+    students.items(),
+    key=lambda x: x[1],
+    reverse=True
+)
+
+print("Ranking:")
+for name, marks in sorted_students:
+    print(name, marks)
+
+# Average marks
+avg = sum(students.values()) / len(students)
+print("Average:", avg)
+
+# Topper
+topper = max(students, key=students.get)
+print("Topper:", topper, students[topper])
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
